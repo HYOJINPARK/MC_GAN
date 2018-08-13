@@ -8,7 +8,7 @@ import torchvision.transforms as transforms
 import torchtext.vocab as vocab
 
 from model import VisualSemanticEmbedding
-from data import ReedICML2016
+from data_MCb import ReedICML2016
 
 
 parser = argparse.ArgumentParser()
