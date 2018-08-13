@@ -1,0 +1,41 @@
+
+CONFIG_NAME: 'MC_GAN'
+
+DATASET_NAME: 'birds'
+EMBEDDING_TYPE: 'cnn-rnn'
+#DATA_DIR: '../../DATA/CUB200_2011'
+DATA_DIR: '../../../../DATA/cub_200_2011'
+#GPU_ID: '1'
+WORKERS: 4
+
+
+TREE:
+    BRANCH_NUM: 1
+    BASE_SIZE: 128
+
+
+TRAIN:
+    FLAG: True
+    NET_G: '' #'../examples/birds_code27_128V4_2018_04_22_20_19_27/Model/netG_80000.pth'
+    NET_D: ''  #'../examples/birds_code27_128V4_2018_04_22_20_19_27/Model/netD'
+    BATCH_SIZE: 32
+    MAX_EPOCH: 1500
+    SNAPSHOT_INTERVAL: 5000
+    DISCRIMINATOR_LR: 0.0002
+    GENERATOR_LR: 0.0002
+    COEFF:
+      ITS_LOSS: 2.0
+      I_LOSS: 2.0
+      IS_LOSS: 1.0
+      RC_LOSS: 15.0
+
+
+GAN:
+    EMBEDDING_DIM: 128
+    DF_DIM: 64
+    GF_DIM: 64
+    Z_DIM: 100
+
+TEXT:
+    DIMENSION: 1024
+
